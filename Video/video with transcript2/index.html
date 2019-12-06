@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example of track modes</title>
+      <link rel="stylesheet" href="css/design.css" />
+  </head>
+<body onload="init();">
+<p style="text-align: left;">This setup contains a video encoded in both <a href="http://demo.jwplayer.com/html5-report/sintel.webm">WebM</a> and <a href="http://demo.jwplayer.com/html5-report/sintel.mp4">MP4</a>. The video contains four tracks:</p>
+
+<p>
+  <video id="myVideo" preload="metadata" poster ="http://mainline.i3s.unice.fr/mooc/sintel.jpg" crossorigin="anonymous" controls="controls" width="640" height="272">
+    
+  <source src="https://mainline.i3s.unice.fr/mooc/sintel.mp4" type="video/mp4" />
+    <source src="https://mainline.i3s.unice.fr/mooc/sintel.webm" type="video/webm" />
+    <track src="https://mainline.i3s.unice.fr/mooc/sintel-captions.vtt" kind="captions" label="English Captions" default/>
+    <track src="https://mainline.i3s.unice.fr/mooc/sintel-descriptions.vtt" kind="descriptions" label="Audio Descriptions" />
+    <track src="https://mainline.i3s.unice.fr/mooc/sintel-chapters.vtt" kind="chapters" label="Chapter Markers" />
+    <track src="https://mainline.i3s.unice.fr/mooc/sintel-thumbs.vtt" kind="metadata" label="Preview Thumbs" /></video></p>
+<div id="currentTrackStatuses"></div><p>
+<div id="subtitlesCaptions"></div><p>
+  <button onclick="clearSubtitlesCaptions();">Clear subtitles/captions log</button></p>
+
+  <p>Click one of these buttons to toggle the mode of each track:</p>
+  <button onclick="toggleTrack(0);">Toggle english caption track mode</button><br>
+  <button onclick="toggleTrack(1);">Toggle audio description track mode</button><br>
+  <button onclick="toggleTrack(2);">Toggle chapter track mode</button><br>
+  <button onclick="toggleTrack(3);">Toggle preview thumbnail track modes</button>
+    
+    <script type="text/javascript" src="scripts/script.js"></script>
+  </body>
+</html>
